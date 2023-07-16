@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+<body>
+    <div class="fondo min-vh-100 d-flex flex-column justify-content-center align-items-center">
+        <!-- Contenedor del formulario botones mensajes etc -->
+        <div class="contenedo-enlance-formulario w-25">            
+            <div class="contenedor-formulario p-5 rounded-bottom shadow p-3 mb-5">
+                <h2 class="mb-4 text-center">LOGIN</h2>
+                <form method="post">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        <label for="usuario">Usuario :</label>
+                        <input type="text" class="form-control" pattern="[A-Za-z ]+" required title="Ingresa solo letras" name="nombre" id="usuario">
+                        <br>
+                        <label for="contraseña">Contraseña :</label>
+                        <input type="text" class="form-control" pattern="[A-Za-z ]+" required title="Ingresa solo letras" name="apellido" id="contraseña">
+                        <br>
+                        <button class="boton" type="submit"><span>Ingresar</span></button>
+                        <button class="boton" type="submit"><span>Registrarse</span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <a href="{% url 'lista_proveedores' %}" class="a">lista proveedores</a>
+    <a href="{% url 'lista_compras' %}" class="a">lista compras</a>
+    <a href="http://127.0.0.1:8000/admin" class="a">admin</a>
+    
+    
+</body>
+</html>
